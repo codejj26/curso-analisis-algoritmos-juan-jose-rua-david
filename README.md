@@ -16,3 +16,19 @@ Estudiante del curso de Análisis de Algoritmos.
 
 - **Nombre:** Juan José Rúa David
 - **Correo:** juan.rudavid@example.com
+- **Semestre:** 2026-2
+
+## Uso
+
+Para clonar este repositorio en su máquina local:
+
+```bash
+git clone <url-del-repositorio>
+cd curso-analisis-algoritmos
+```
+
+Y para ejecutar un script de benchmarks de ejemplo:
+
+```bash
+python benchmarks/medir_tiempos.py
+```
