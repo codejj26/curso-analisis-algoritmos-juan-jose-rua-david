@@ -13,3 +13,6 @@ El repositorio se organiza en las siguientes carpetas:
 ## Autor
 
 Estudiante del curso de Análisis de Algoritmos.
+
+- **Nombre:** Juan José Rúa David
+- **Correo:** juan.rudavid@example.com
