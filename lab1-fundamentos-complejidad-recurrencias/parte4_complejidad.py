@@ -10,6 +10,7 @@ Uso:
 
 import sys
 import time
+from collections.abc import Callable
 from pathlib import Path
 
 import matplotlib
@@ -28,7 +29,8 @@ TAMANOS: list[int] = [100, 200, 400, 800, 1600, 3200, 6400]
 REPETICIONES: int = 3
 
 
-def medir_tiempo(ordenar, n: int) -> float:
+def medir_tiempo(ordenar: Callable[[list[int]], tuple[list[int], int]],
+                 n: int) -> float:
     """Mide el tiempo promedio de un algoritmo sobre el escenario A.
 
     El tiempo de generacion de los datos no se cronometra: la medicion

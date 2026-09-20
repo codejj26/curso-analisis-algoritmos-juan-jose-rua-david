@@ -11,6 +11,7 @@ Uso:
 
 import sys
 import time
+from collections.abc import Callable
 from pathlib import Path
 
 import matplotlib
@@ -31,10 +32,11 @@ from datos import (  # noqa: E402
 
 TAMANOS: list[int] = [100, 200, 400, 800, 1600, 3200, 6400]
 REPETICIONES: int = 3
-GRARICAS = "graficas"
+GRAFICAS = "graficas"
 
 
-def medir_escenario(generador, n: int) -> tuple[float, int]:
+def medir_escenario(generador: Callable[[int], list[int]],
+                    n: int) -> tuple[float, int]:
     """Mide tiempo promedio y comparaciones de insertion sort en un escenario.
 
     El tiempo de generacion de los datos no se cronometra: la medicion
@@ -85,7 +87,7 @@ def graficar(tamanos: list[int], series: dict[str, list], ylabel: str,
     ax.legend()
     fig.tight_layout()
 
-    carpeta = _DIR / GRARICAS
+    carpeta = _DIR / GRAFICAS
     carpeta.mkdir(exist_ok=True)
     fig.savefig(carpeta / nombre, dpi=150)
     plt.close(fig)
@@ -93,7 +95,7 @@ def graficar(tamanos: list[int], series: dict[str, list], ylabel: str,
 
 def main() -> None:
     """Ejecuta el experimento y genera las dos graficas de la Parte 3."""
-    escenarios: dict[str, callable] = {
+    escenarios: dict[str, Callable[[int], list[int]]] = {
         "A - Aleatorio": generar_aleatorio,
         "B - Casi ordenado": generar_casi_ordenado,
         "C - Orden inverso": generar_inverso,

@@ -5,9 +5,6 @@ las comparaciones entre elementos de la lista. Ninguno modifica la
 lista recibida: trabajan sobre una copia.
 """
 
-from collections.abc import Sequence
-
-
 def insertion_sort(datos: list[int]) -> tuple[list[int], int]:
     """Ordena una lista de indices de riesgo con el metodo de insercion.
 
@@ -38,7 +35,7 @@ def insertion_sort(datos: list[int]) -> tuple[list[int], int]:
     return copia, comparaciones
 
 
-def merge_sort(datos: Sequence[int]) -> tuple[list[int], int]:
+def merge_sort(datos: list[int]) -> tuple[list[int], int]:
     """Ordena una lista de indices de riesgo con el metodo de mezcla.
 
     No modifica la lista recibida: trabaja sobre una copia.
