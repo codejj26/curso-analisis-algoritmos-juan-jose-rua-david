@@ -46,7 +46,7 @@ Muy buen trabajo: un informe completo, ordenado y apoyado en sus propias medicio
 - Los generadores producen valores distintos, del tamaño pedido y con semilla.
 
 **Lo que puede mejorar:**
-- Estilo PEP 8: falta una línea en blanco antes de `insertion_sort` y los archivos no terminan con salto de línea.
+- Estilo PEP 8: falta una línea en blanco antes de `insertion_sort`.
 - La función interna `_merge_sort` no tiene su descripción (docstring).
 - En el escenario B el 2 % final son los valores más grandes del lote, así que no es un "casi ordenado" típico; usted lo explica bien, pero conviene escoger esos valores al azar.
 
