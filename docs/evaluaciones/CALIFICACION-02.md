@@ -53,7 +53,7 @@ Excelente trabajo: un informe completo, ordenado y apoyado en sus propias medici
 - Incluyó instrucciones de reproducción y cinco commits descriptivos del laboratorio.
 
 ## ¿El código funciona?
-Sí. Las pruebas pasan, probé sus funciones con listas aleatorias adicionales y coinciden con el resultado de referencia, y la medición corre y genera la gráfica.
+Sí. Las pruebas pasan, sus funciones coinciden con el resultado de referencia en listas aleatorias adicionales, y la medición corre y genera la gráfica.
 
 ## Para el próximo laboratorio
 - Mantenga el rótulo de los ejes consistente con lo que calcula (mediana o promedio).
